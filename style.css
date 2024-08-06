@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.heading-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333; /* Adjust color */
+}
+
+.button-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #eee;
+    color: #333;
+}
+
+.tab.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#area {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#editor-text {
+    width: 100%;
+    min-height: 200px;
+    height: 500px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.tab-content {
+    display: none;
+    margin-top: 20px;
+}
+
+#help-content {
+    display: flex;
+    padding: 2%;
+}
+
+#markdown-help,
+#mathjax-help, #back-button {
+    margin: 2%;
+    padding: 2%;
+    text-align: center;
+}
+
+.dark-mode {
+    color: #ccc;
+    background-color: #1a1a1a;
+}
+
+.dark-mode .tab.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.dark-mode .heading,
+.dark-mode .tab,
+.dark-mode #area,
+.dark-mode #editor-text {
+    color: #ccc;
+    background-color: #1a1a1a;
+    border-color: #666;
+}
+
+.help-content {
+    margin-top: 20px;
+}
+
+.command {
+    margin-bottom: 10px;
+}
+
+.command-name {
+    font-weight: bold;
+}
+
+.command-description {
+    margin-left: 10px;
+    color: #666;
+}

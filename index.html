@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Previewer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Cookie Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="heading-container">
+            <h1 class="heading">Markdown Previewer</h1>
+            <button class="dark-mode-toggle" id="dark-mode-toggle">🌙</button>
+        </div>
+        <div class="button-container">
+            <button class="button" id="save-button">Save</button>
+            <button class="button" id="open-button">Open</button>
+        </div>
+        <div class="tabs">
+            <button class="tab" id="editor">EDITOR</button>
+            <button class="tab" id="preview">PREVIEW</button>
+            <button class="tab" id="help">HELP</button>
+        </div>
+        <div id="area">
+            <div class="tab-content" id="editor-content">
+                <textarea id="editor-text" cols="50" rows="10"></textarea>
+            </div>
+            <div class="tab-content" id="preview-content"></div>
+            <div class="tab-content help-content" id="help-content">
+                <div class="button" id="markdown-help">Markdown</div>
+                <div class="button" id="mathjax-help">Math</div>
+                <div class="button" id="back-button">Back</div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/marked.min.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\(', '\)'], ['\\(', '\\)']],
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script src="js/mathjax.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
